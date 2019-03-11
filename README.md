@@ -129,6 +129,52 @@ Delete last character
 <code><pre> String & pop_back();  
 </code></pre>
 
+## String Operation 
+Get C string equivalent 
+<code><pre>const char * c_str() const;
+</code></pre>
+
+<code><pre>size_t copy(char* s, size_t len, size_type pos = 0) const;
+</code></pre>
+Find content in string
+<code><pre>size_type find(const String& other, size_type pos = 0) const; //string(1)
+size_type find(const char* s, size_type pos = 0) const; // c - string(2)
+size_type find(const char* s, size_type pos, size_type n) const; // buffer(3)
+size_type find(char c, size_type pos = 0) const; // character(4)
+ </code></pre>
+Find last occurrence of content in string
+<code><pre>size_type rfind(const String& other, size_type pos = npos) const; // string(1)
+size_type rfind(const char* s, size_type pos = npos) const; // c - string(2)
+size_type rfind(const char* s, size_type pos, size_t n) const; // buffer(3)
+size_type rfind(char c, size_type pos = npos) const; // character(4)
+</code></pre>
+Find character in string 
+<code><pre>size_type find_first_of(const String& other, size_type pos = 0) const; // string(1)
+size_type find_first_of(const char* other, size_type pos = 0) const; 	// c - string(2)
+size_type find_first_of(const char* other, size_type pos, size_t n) const; 	// buffer(3)
+size_type find_first_of(char c, size_type pos = 0) const; // character(4)
+</code></pre>
+Find character in string from the end
+<code><pre>size_type find_last_of(const String& other, size_type pos = String::npos) const; // string(1)
+size_type find_last_of(const char* other, size_type pos = String::npos) const; // c - string(2)
+size_type find_last_of(const char* other, size_type pos, size_t n) const; // buffer(3)
+size_type find_last_of(char c, size_type pos = String::npos) const; 	// character(4)
+</code></pre>
+Find absence of character in string
+<code><pre>size_type find_first_not_of(const String& other, size_type pos = 0) const; // string(1)
+size_type find_first_not_of(const char* other, size_type pos = 0) const; 	// c - string(2)
+size_type find_first_not_of(const char* other, size_type pos, size_t n) const; // buffer(3)
+size_type find_first_not_of(char c, size_type pos = 0) const; // character(4)
+</code></pre>
+Find non-matching character in string from the end
+<code><pre>size_type find_last_not_of(const String& other, size_type pos = String::npos) const; // string(1)
+size_type find_last_not_of(const char* other, size_type pos = String::npos) const; // c - string(2)
+size_type find_last_not_of(const char* other, size_type pos, size_t n) const; // buffer(3)
+size_type find_last_not_of(char c, size_type pos = String::npos) const; // character(4)
+</code></pre>
+Generate substring
+<code><pre>String substr(size_type pos = 0, size_t len = npos) const;
+</code></pre>
 
 
 
