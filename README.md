@@ -178,20 +178,20 @@ Return size of allocated storage
 <pre><code>size_t capacity() const;
 </code></pre>
 Request a change in capacity 
-<code><pre>void reserve(size_t n = 0);
+<pre><code>void reserve(size_t n = 0);
 </code></pre>
 Clear string
 <pre><code>void clear();
 </code></pre>
 Return true is string is empty
-<code><pre>bool empty() const;
+<pre><code>bool empty() const;
 </code></pre>
 Shrink to fit
 <pre><code>void shrink_to_fit();
 </code></pre>
 
 ## Member constant
-Maximum value for size_t<code><pre>static const size_t npos = -1;
+Maximum value for size_t<pre><code>static const size_t npos = -1;
 </code></pre>
 
 ## Non-member functions overloads
