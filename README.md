@@ -67,13 +67,11 @@ char & back();
 </code></pre>
 
 ## Modifiers
-Append to string
+Append to String
 <code><pre>String & operator += (const String &); // string (1)
 String & operator += (const char *); // c - string (2)
 String & operator += (char); // char (3)
-</code></pre>
-Append to string 
-<code><pre>String& append(const String& str); // string (1)
+String& append(const String& str); // string (1)
 String& append(const String& str, size_type subpos, size_t sublen = npos); // substring (2)
 String& append(const char* s); // c - string (3)
 String& append(const char* s, size_t n); // buffer(4)
