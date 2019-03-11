@@ -1,5 +1,3 @@
-#pragma once
-
 #ifndef __JD_STRING__
 #define __JD_STRING__
 
