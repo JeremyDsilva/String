@@ -1,5 +1,4 @@
 # String Class
-
 My implementation of a String class that mimics functanility of STL string. 
 
 ## Constructor 
@@ -12,7 +11,6 @@ String(const char* s, size_t n); // from buffer
 String(size_t n, char c);// fill constructor  
 String(const const_iterator first, const const_iterator second); // range constructor 
 </code></pre>
-
 
 ## Equality operator
 <pre><code>String & operator= (const String &); // copy assignment   
@@ -71,6 +69,8 @@ Append to String
 <pre><code>String & operator += (const String &); // string (1)
 String & operator += (const char *); // c - string (2)
 String & operator += (char); // char (3)
+</code></pre>
+Append to String
 String& append(const String& str); // string (1)
 String& append(const String& str, size_type subpos, size_t sublen = npos); // substring (2)
 String& append(const char* s); // c - string (3)
