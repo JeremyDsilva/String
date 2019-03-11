@@ -168,7 +168,7 @@ Returns length of string
 inline size_t size() const;
 </code></pre>
 Returns maximum size of string
-<code><pre>size_t max_size() const;
+<pre><code>size_t max_size() const;
 </code></pre>
 Resize string
 <pre><code>void resize(size_t n);
