@@ -190,8 +190,8 @@ Shrink to fit
 <code><pre>void shrink_to_fit();
 </code></pre>
 
-## Member constants
-<code><pre>static const size_t npos = -1; 
+## Member constant
+Maximum value for size_t<code><pre>static const size_t npos = -1;
 </code></pre>
 
 ## Non-member functions overloads
