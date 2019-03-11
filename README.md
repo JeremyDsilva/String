@@ -50,8 +50,7 @@ const_reverse_iterator crend() const;
 
 ## Comparision Operators
 How its Comparision
-<code><pre>
-friend bool operator == (const String &, const String &);   
+<code><pre>friend bool operator == (const String &, const String &);   
 friend bool operator != (const String &, const String &);   
 friend bool operator < (const String &, const String &);  
 friend bool operator > (const String &, const String &);  
