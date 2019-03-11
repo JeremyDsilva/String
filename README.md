@@ -195,6 +195,16 @@ Maximum value for size_t<pre><code>static const size_t npos = -1;
 </code></pre>
 
 ## Non-member functions overloads
+</code></pre>
+Comparisions
+<pre><code>
+friend bool operator == (const String &, const String &);   
+friend bool operator != (const String &, const String &);   
+friend bool operator < (const String &, const String &);  
+friend bool operator > (const String &, const String &);  
+friend bool operator <= (const String &, const String &);  
+friend bool operator >= (const String &, const String &);
+</code></pre>
 Exchanges the values of two strings 
 <pre><code>void swap(String& x, String& y);
 </code></pre>
@@ -214,13 +224,3 @@ Extract string from stream
 Get line from stream into string
 <pre><code>std::istream& getline(std::istream& is, _JD String& str, char delim);
 std::istream& getline(std::istream& is, _JD String& str);
-</code></pre>
-Comparisions:  
-Comparision function first evaluates lengths of string to determine comparisions. If lengths are equal, comparision is based on strcmp.
-<pre><code>friend bool operator == (const String &, const String &);   
-friend bool operator != (const String &, const String &);   
-friend bool operator < (const String &, const String &);  
-friend bool operator > (const String &, const String &);  
-friend bool operator <= (const String &, const String &);  
-friend bool operator >= (const String &, const String &);
-</code></pre>
