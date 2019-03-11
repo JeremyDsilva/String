@@ -203,6 +203,11 @@ Shrink to fit
 <code><pre>void shrink_to_fit();
 </code></pre>
 
+## Member constants
+<code><pre>static const size_t npos = -1; 
+</code></pre>
+
+
 
 
 
