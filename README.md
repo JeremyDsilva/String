@@ -84,7 +84,6 @@ Append character to string
 <code><pre>String & push_back(char);
 </code></pre>
 Insert into string
-</code></pre>
 <code><pre>String& insert(size_type pos, const String& other); 	// string(1)
 String& insert(size_type pos, const String& other, size_type subpos, size_t sublen = npos); 	// substring(2)
 String& insert(size_type pos, const char* other); // c - string(3)
