@@ -133,7 +133,7 @@ Delete last character
 Get C string equivalent 
 <code><pre>const char * c_str() const;
 </code></pre>
-
+Copy sequence of characters from string
 <code><pre>size_t copy(char* s, size_t len, size_type pos = 0) const;
 </code></pre>
 Find content in string
