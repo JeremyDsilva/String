@@ -3,7 +3,7 @@
 My implementation of a String class that mimics functanility of STL string. 
 
 ## Constructor 
-<pre><code class="language-cpp">String(); // default constructor  
+<pre><code>String(); // default constructor  
 String(const String &); // copy constructor  
 String(const String& other, size_type pos, size_t len = npos); // substring constructor  
 String(String &&); // move constructor  
