@@ -197,7 +197,7 @@ Maximum value for size_t<pre><code>static const size_t npos = -1;
 ## Non-member functions overloads
 </code></pre>
 Comparisions
-<pre><code>
+<pre><code> // Size is compared and if equal then comapred lexicographically
 friend bool operator == (const String &, const String &);   
 friend bool operator != (const String &, const String &);   
 friend bool operator < (const String &, const String &);  
