@@ -207,7 +207,27 @@ Shrink to fit
 <code><pre>static const size_t npos = -1; 
 </code></pre>
 
-
+## Non-member functions overloads
+Exchanges the values of two strings 
+<code><pre>void swap(String& x, String& y);
+</code></pre>
+Returns concatenated Strings
+<code><pre>String operator+ (const String& lhs, const String& rhs);
+String operator+ (const String& lhs, const char*   rhs);
+String operator+ (const char*   lhs, const String& rhs);
+String operator+ (const String& lhs, char rhs);
+String operator+ (char lhs, const String& rhs);
+</code></pre>
+Insert string into stream
+<code><pre>std::ostream& operator<< (std::ostream& os, const _JD String& str);
+</code></pre>
+Extract string from stream 
+<code><pre>std::istream& operator>> (std::istream& is, _JD String& str);
+</code></pre>
+Get line from stream into string
+<code><pre>std::istream& getline(std::istream& is, _JD String& str, char delim);
+std::istream& getline(std::istream& is, _JD String& str);
+</code></pre>
 
 
 
