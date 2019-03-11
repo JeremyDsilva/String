@@ -35,7 +35,7 @@ const_iterator cend() const;
 </code></pre>  
 Returns reverse_iterator/const_reverse_iterator to the last character   
 <pre><code>reverse_iterator rbegin();  
-const_reverse_iterator rbegin() const; // return const_reverse_iterator to the last character
+const_reverse_iterator rbegin() const; 
 </code></pre>  
 Returns reverse_iterator/const_reverse_iterator pointing to reverse past-the-end character of the string
 <pre><code>reverse_iterator rend(); 
@@ -60,7 +60,7 @@ Access first character
 char & front();
 </code></pre>
 Access last character 
-<code><pre>const char & back() const;
+<pre><code>const char & back() const;
 char & back();
 </code></pre>
 
