@@ -48,16 +48,6 @@ return const_reverse_iterator pointing to the last character / reverse past-the-
 const_reverse_iterator crend() const; 
 </code></pre>
 
-## Comparision Operators
-How its Comparision
-<code><pre>friend bool operator == (const String &, const String &);   
-friend bool operator != (const String &, const String &);   
-friend bool operator < (const String &, const String &);  
-friend bool operator > (const String &, const String &);  
-friend bool operator <= (const String &, const String &);  
-friend bool operator >= (const String &, const String &);
-</code></pre>
-
 ## Element access
 Get character of string
 <code><pre>const char & operator [] (size_type) const;
@@ -227,6 +217,15 @@ Extract string from stream
 Get line from stream into string
 <code><pre>std::istream& getline(std::istream& is, _JD String& str, char delim);
 std::istream& getline(std::istream& is, _JD String& str);
+</code></pre>
+Comparisions  
+Comparision first evaluates lengths of string to determine comparisions. If lengths are equal, comparision is based on strcmp.
+<code><pre>friend bool operator == (const String &, const String &);   
+friend bool operator != (const String &, const String &);   
+friend bool operator < (const String &, const String &);  
+friend bool operator > (const String &, const String &);  
+friend bool operator <= (const String &, const String &);  
+friend bool operator >= (const String &, const String &);
 </code></pre>
 
 
