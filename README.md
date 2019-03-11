@@ -52,7 +52,7 @@ Get character of string
 char & operator [] (size_type);
 </code></pre>
 Get character in string
-<<pre><code>const char & at(size_type) const;
+<pre><code>const char & at(size_type) const;
 char & at(size_type);
 </code></pre>
 Access first character
