@@ -175,6 +175,34 @@ Generate substring
 <code><pre>String substr(size_type pos = 0, size_t len = npos) const;
 </code></pre>
 
+## Capacity
+Return length of string
+<code><pre>size_t length() const;
+inline size_t size() const;
+</code></pre>
+Return maximum size of string
+<code><pre>size_t max_size() const;
+</code></pre>
+Resize string
+<code><pre>void resize(size_t n);
+void resize(size_type n, char c);
+</code></pre>
+Return size of allocated storage 
+<code><pre>size_t capacity() const;
+</code></pre>
+Request a change in capacity 
+<code><pre>void reserve(size_t n = 0);
+</code></pre>
+Clear string
+<code><pre>void clear();
+</code></pre>
+Return true is string is empty
+<code><pre>bool empty() const;
+</code></pre>
+Shrink to fit
+<code><pre>void shrink_to_fit();
+</code></pre>
+
 
 
 
