@@ -112,7 +112,7 @@ Swap string values
 <pre><code>void swap(String &);
 </code></pre>
 Delete last character
-<code><pre> String & pop_back();  
+<pre><code>String & pop_back();  
 </code></pre>
 
 ## String Operation 
