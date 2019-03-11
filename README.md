@@ -70,8 +70,7 @@ Append to String
 String & operator += (const char *); // c - string (2)
 String & operator += (char); // char (3)
 </code></pre>
-Append to String
-String& append(const String& str); // string (1)
+Append to String<pre><code>String& append(const String& str); // string (1)
 String& append(const String& str, size_type subpos, size_t sublen = npos); // substring (2)
 String& append(const char* s); // c - string (3)
 String& append(const char* s, size_t n); // buffer(4)
