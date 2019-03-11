@@ -164,7 +164,7 @@ Generate substring
 ## Capacity
 Returns length of string
 <pre><code>size_t length() const;
-inline size_t size() const;
+size_t size() const;
 </code></pre>
 Returns maximum size of string
 <pre><code>size_t max_size() const;
