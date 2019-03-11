@@ -32,11 +32,11 @@ return iterator/const_iterator pointing to past-the-end character of the string
 const_iterator end() const; 
 </code></pre>  
 returns const_iterator pointing to the first character / past-the-end character of the string
-<pre><code> const_iterator cbegin() const;  
+<pre><code>const_iterator cbegin() const;  
 const_iterator cend() const; 
 </code></pre>  
 return reverse_iterator/const_reverse_iterator to the last character   
-<pre><code> reverse_iterator rbegin();  
+<pre><code>reverse_iterator rbegin();  
 const_reverse_iterator rbegin() const; // return const_reverse_iterator to the last character
 </code></pre>  
 return reverse_iterator/const_reverse_iterator pointing to reverse past-the-end character of the string
@@ -44,7 +44,7 @@ return reverse_iterator/const_reverse_iterator pointing to reverse past-the-end 
 const_reverse_iterator rend() const; 
 </code></pre>  
 return const_reverse_iterator pointing to the last character / reverse past-the-end character of the string 
-<pre><code> const_reverse_iterator crbegin() const; 
+<pre><code>const_reverse_iterator crbegin() const; 
 const_reverse_iterator crend() const; 
 </code></pre>
 
@@ -96,7 +96,7 @@ Append character to string
 </code></pre>
 Insert into string
 </code></pre>
-<code><pre> String& insert(size_type pos, const String& other); 	// string(1)
+<code><pre>String& insert(size_type pos, const String& other); 	// string(1)
 String& insert(size_type pos, const String& other, size_type subpos, size_t sublen = npos); 	// substring(2)
 String& insert(size_type pos, const char* other); // c - string(3)
 String& insert(size_type pos, const char* s, size_t n); 	// buffer(4)
@@ -111,7 +111,7 @@ iterator erase(const_iterator p); // character(2)
 iterator erase(const_iterator first, const_iterator last); // range(3)  
 </code></pre>
 Replace portion of string
-<code><pre> String& replace(size_type pos, size_t len, const String& other); // string(1)
+<code><pre>String& replace(size_type pos, size_t len, const String& other); // string(1)
 String& replace(const_iterator i1, const_iterator i2, const String& other); // string(2)
 String& replace(size_type pos, size_t len, const String& other, size_type subpos, size_t sublen = npos); // substring(3)
 String& replace(size_type pos, size_t len, const char* s); // c - string(4)
