@@ -190,7 +190,7 @@ Shrink to fit
 </code></pre>
 
 ## Member constant
-Maximum value for size_t<pre><code>static const size_t npos = -1;
+<pre><code>static const size_t npos = -1; // Maximum value for size_t
 </code></pre>
 
 ## Non-member functions overloads
