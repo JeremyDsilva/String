@@ -23,27 +23,27 @@ String & operator = (String &&); // move assignment
 <pre><code>~String();</code></pre>
 
 ## Iterators  
-return iterator/const_iterator to the first character
+Returns iterator/const_iterator to the first character
 <pre><code>iterator begin(); 
 const_iterator begin() const;   
 </code></pre>  
-return iterator/const_iterator pointing to past-the-end character of the string  
+Returns iterator/const_iterator pointing to past-the-end character of the string  
 <pre><code>iterator end();  
 const_iterator end() const; 
 </code></pre>  
-returns const_iterator pointing to the first character / past-the-end character of the string
+Returns const_iterator pointing to the first character / past-the-end character of the string
 <pre><code>const_iterator cbegin() const;  
 const_iterator cend() const; 
 </code></pre>  
-return reverse_iterator/const_reverse_iterator to the last character   
+Returns reverse_iterator/const_reverse_iterator to the last character   
 <pre><code>reverse_iterator rbegin();  
 const_reverse_iterator rbegin() const; // return const_reverse_iterator to the last character
 </code></pre>  
-return reverse_iterator/const_reverse_iterator pointing to reverse past-the-end character of the string
+Returns reverse_iterator/const_reverse_iterator pointing to reverse past-the-end character of the string
 <pre><code>reverse_iterator rend(); 
 const_reverse_iterator rend() const; 
 </code></pre>  
-return const_reverse_iterator pointing to the last character / reverse past-the-end character of the string 
+Returns const_reverse_iterator pointing to the last character / reverse past-the-end character of the string 
 <pre><code>const_reverse_iterator crbegin() const; 
 const_reverse_iterator crend() const; 
 </code></pre>
@@ -165,11 +165,11 @@ Generate substring
 </code></pre>
 
 ## Capacity
-Return length of string
+Returns length of string
 <code><pre>size_t length() const;
 inline size_t size() const;
 </code></pre>
-Return maximum size of string
+Returns maximum size of string
 <code><pre>size_t max_size() const;
 </code></pre>
 Resize string
@@ -217,8 +217,8 @@ Get line from stream into string
 <code><pre>std::istream& getline(std::istream& is, _JD String& str, char delim);
 std::istream& getline(std::istream& is, _JD String& str);
 </code></pre>
-Comparisions  
-Comparision first evaluates lengths of string to determine comparisions. If lengths are equal, comparision is based on strcmp.
+Comparisions:  
+Comparision function first evaluates lengths of string to determine comparisions. If lengths are equal, comparision is based on strcmp.
 <code><pre>friend bool operator == (const String &, const String &);   
 friend bool operator != (const String &, const String &);   
 friend bool operator < (const String &, const String &);  
