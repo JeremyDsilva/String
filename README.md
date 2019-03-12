@@ -1,5 +1,5 @@
 # String Class
-My implementation of a String class that mimics functanility of STL string. 
+My implementation of a String class that mimics functionality of STL string.  
 
 ## Constructor 
 <pre><code>String(); // default constructor  
