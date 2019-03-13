@@ -136,8 +136,8 @@ public:
 
 	};
 
-	using const_reverse_pointer = const_iterator;
-	using reverse_pointer = iterator;
+	using const_reverse_pointer = const_reverse_iterator;
+        using reverse_pointer = reverse_iterator;
 
 	//	Constructor
 public:
