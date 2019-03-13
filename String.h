@@ -163,7 +163,7 @@ public:
 
 private:
 	inline String_iterator_type _ibegin() const;
-	inline String::String_iterator_type _rbegin() const; // not tested
+	inline String::String_iterator_type _rbegin() const;
 	inline String_iterator_type _end() const;
 	size_t _getLength(const const_iterator first, const const_iterator second);
 	
