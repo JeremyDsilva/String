@@ -84,27 +84,27 @@ String::~String() {
 	Comparision Operators
 */
 
-bool _JD operator == (const String & lhs, const String & rhs) {
+bool operator == (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) == 0;
 }
 
-bool _JD operator != (const String & lhs, const String & rhs) {
+bool operator != (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) != 0;
 }
 
-bool _JD operator < (const String & lhs, const String & rhs) {
+bool operator < (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) < 0;
 }
 
-bool _JD operator > (const String & lhs, const String & rhs) {
+bool operator > (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) > 0;
 }
 
-bool _JD operator <= (const String & lhs, const String & rhs) {
+bool operator <= (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) <= 0;
 }
 
-bool _JD operator >= (const String & lhs, const String & rhs) {
+bool operator >= (const String & lhs, const String & rhs) {
 	return lhs._compare(rhs) >= 0;
 }
 
