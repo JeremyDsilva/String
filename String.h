@@ -8,13 +8,20 @@ _JD_BEGIN
 
 class String {
 
+public:
 	using size_type = size_t; // size_type for positions
+	static const size_t npos = -1;
+
+private:
 
 	char * _str = nullptr;   // c-string
 	size_t _str_len = 0;     // length
 	size_t _str_cap = 0;     // capacity
 
 	size_t _increaseBy = 15;
+
+
+// iterators
 
 	struct String_iterator_type {
 		char * first;
@@ -27,8 +34,6 @@ class String {
 	};
 
 public:
-
-	static const size_t npos = -1; 
 
 	class const_iterator {
 	public:
