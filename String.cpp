@@ -722,7 +722,7 @@ inline size_t String::size() const {
 }
 
 size_t String::max_size() const {
-	return String::npos;
+	return String::npos -1;
 }
 
 void String::resize(size_t n) {
