@@ -1,5 +1,5 @@
 # String Class
-My implementation of a String class that mimics functionality of STL string.  
+A simple customisable implementation of a String class that mimics functionality of std::string, including iterators.
 
 ## Using Statements
 <pre><code>using size_type = size_t; // size_type for positions of char in cstring
