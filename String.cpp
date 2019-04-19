@@ -58,7 +58,7 @@ String & String::operator= (const String & other) {
 
 String & String::operator = (String && other) {
 	if (this != &other) {
-		_freeMemory(_str);
+		safe_delete(_str);
 		_str = other._str;
 		_str_len = other._str_len;
 		_str_cap = other._str_cap;
@@ -74,7 +74,7 @@ String & String::operator = (String && other) {
 */
 
 String::~String() {
-	_freeMemory(_str);
+	safe_delete(_str);
 	_str_len = 0;
 	_str_cap = 0;
 	_increaseBy = 0;
@@ -195,7 +195,7 @@ String & String::append(const String & other, size_type subpos, size_t sublen)
 	char * buffer = nullptr;
 	_substr(buffer, other._str, subpos, sublen);
 	_append(buffer, sublen);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -210,7 +210,7 @@ String & String::append(const char * s, size_t n)
 	char * buffer = nullptr;
 	_substr(buffer, s, 0, n);
 	_append(buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -219,7 +219,7 @@ String & String::append(size_type n, char c)
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, c);
 	_append(buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -230,7 +230,7 @@ String & String::append(const String::const_iterator first, const String::const_
 		char * buffer = nullptr;
 		_alloc_cstring(buffer, n, first, second);
 		_append(buffer, n);
-		_freeMemory(buffer);
+		safe_delete(buffer);
 	}
 	return *this;
 }
@@ -255,7 +255,7 @@ String & String::insert(size_type pos, const String & other, size_type subpos, s
 	char * buffer = nullptr;
 	_substr(buffer, other._str, subpos, sublen);
 	_insert_str(pos, buffer, sublen);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -269,7 +269,7 @@ String & String::insert(size_type pos, const char * s, size_t n)
 	char * buffer = nullptr;
 	_substr(buffer, s, 0, n);
 	_insert_str(pos, buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -278,7 +278,7 @@ String & String::insert(size_type pos, size_t n, char c)
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, c);
 	_insert_str(pos, buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -287,7 +287,7 @@ void String::insert(iterator p, size_t n, char c)
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, c);
 	_insert_str(p.current.pos, buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 }
 
 String::iterator String::insert(String::iterator p, char c)
@@ -304,7 +304,7 @@ void String::insert(String::iterator p, const String::const_iterator first, cons
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, first, second);
 	_insert_str(p.current.pos, buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 }
 
 // erase
@@ -341,7 +341,7 @@ String& String::replace(size_type pos, size_t len, const String& other, size_typ
 	char * buffer = nullptr;
 	_substr(buffer, other._str, subpos, sublen);
 	_replace(pos, len, buffer, strlen(buffer));
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -369,7 +369,7 @@ String& String::replace(size_type pos, size_t len, size_t n, char c) {
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, c);
 	_replace(pos, len, buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -377,7 +377,7 @@ String& String::replace(const_iterator i1, const_iterator i2, size_type n, char 
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, c);
 	_replace(i1.current.pos, _getLength(i1, i2), buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -403,7 +403,7 @@ String& String::replace(String::const_iterator i1, String::const_iterator i2,
 	char * buffer = nullptr;
 	_alloc_cstring(buffer, n, first, second);
 	_replace(i1.current.pos, _getLength(i1, i2), buffer, n);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return *this;
 }
 
@@ -451,7 +451,7 @@ void String::_insert_str(size_type pos, const char * other, size_t n)
 		_clear_str(pos);  // string contains only first part
 		_append(other, n); // append second (new) part to string
 		_append(buffer, strlen(buffer)); // append thrid part to string
-		_freeMemory(buffer); // freeMemory used
+		safe_delete(buffer); // freeMemory used
 	}
 	else
 		_append(other, n); // cat other to _str
@@ -487,8 +487,8 @@ void String::_replace(size_type pos, size_t len, const char * other, size_t n)
 	_append(replace_buffer);									  // append second part of string
 	_append(buffer); 									  // append third part of string
 	// free memory 
-	_freeMemory(replace_buffer);
-	_freeMemory(buffer);
+	safe_delete(replace_buffer);
+	safe_delete(buffer);
 }
 
 size_t String::_getLength(const String & str, size_type pos, size_t len) const {
@@ -638,7 +638,7 @@ String String::substr(size_type pos, size_t len) const
 	char * buffer = nullptr;
 	_substr(buffer, _str, pos, len);
 	String toReturn(buffer);
-	_freeMemory(buffer);
+	safe_delete(buffer);
 	return toReturn;
 }
 
@@ -798,7 +798,7 @@ void String::_setCapacity(const size_t cap) {
 			operator[](i) = buffer[i];
 		operator[](_str_len) = '\0';
 	}
-	_freeMemory(buffer);
+	safe_delete(buffer);
 }
 
 void String::_increaseCapacity(const size_t n) {
@@ -840,21 +840,6 @@ void String::_alloc_cstring(char * &buffer, const size_t n, const String::const_
 	String::const_iterator begin = i1;
 	for (size_type i = 0; i < n; ++i)
 		buffer[i] = *begin++;
-}
-
-void String::_freeMemory(char * & c)
-{
-	if(c)
-		delete[] c;
-	c = nullptr;
-}
-
-void String::_freeMemory(char * & c) const
-{
-	if (c == _str) return;
-	if (c == nullptr) return;
-	delete[] c;
-	c = nullptr;
 }
 
 void String::_fill_str(char * other, const size_t len, const size_type pos, char c) const

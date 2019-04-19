@@ -324,8 +324,6 @@ private:
 	void _alloc_cstring(char * &buffer,const size_t n) const;
 	void _alloc_cstring(char * &buffer,const size_t n, char c) const;
 	void _alloc_cstring(char * &buffer,const size_t n, const const_iterator i1, const const_iterator i2) const;
-	void _freeMemory(char * & c);
-	void _freeMemory(char * & c) const;
 	void _fill_str(char * other, const size_t len, size_type pos, char c) const;
 	void _clear_str(const size_type pos);
 

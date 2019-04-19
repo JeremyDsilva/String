@@ -6,6 +6,8 @@
 #define _JD jd::
 #define _USING_JD using namespace jd;
 
+#define safe_delete(x) { delete x; x = nullptr; } 
+
 #include <utility>
 #include <cstdlib>
 
